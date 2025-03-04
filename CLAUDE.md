@@ -3,6 +3,13 @@
 ## Project Overview
 The MCP Java SDK implements the [Model Context Protocol](https://modelcontextprotocol.org/docs/concepts/architecture) for Java applications. This SDK enables communication between Java applications and AI models/tools through a standardized interface, supporting both synchronous and asynchronous patterns.
 
+We identified that the package name java.sdk.main.mcp.protocol was causing a SecurityException because it started with "java", which is a reserved package prefix in Java.
+We changed the package name to com.sdk.main.mcp.protocol in both the main and test source files.
+We moved the source files to the correct directory structure that matches the new package name.
+We cleaned up the old files and directories to prevent duplicate class issues.
+After cleaning and rebuilding, the tests are now passing successfully.
+The project structure is now properly organized with the correct package naming convention, and all tests are passing. 
+
 Key components:
 - Core MCP client and server implementations
 - Transport mechanisms (stdio, HTTP/SSE)
