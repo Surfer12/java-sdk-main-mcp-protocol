@@ -5,6 +5,7 @@
 		}
 	],
 	"settings": {
-		"maven.view": "flat"
+		"maven.view": "flat",
+		"java.compile.nullAnalysis.mode": "automatic"
 	}
 }
